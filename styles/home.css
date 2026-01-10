@@ -1,0 +1,30 @@
+main {
+    background-color: rgb(236, 230, 241);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+section img {
+    display: block;
+    margin: 0 auto;
+    border: 3 px solid rgb(201, 169, 227);
+    border-radius: 8px;
+}
+
+main h1 {
+    color: rgb(152, 18, 18);
+    text-align: center;
+}
+
+.course-card {
+    border: 1px solid #610505;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    background-color: #0b853f;
+}
+
+.course-card.completed {
+    background-color: #094818; 
+    border-color: #610505;
+}

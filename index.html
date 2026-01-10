@@ -6,11 +6,15 @@
     <title>Home Page</title>
     <meta name="description" content="home page for my website.">
     <meta name="author" content="Moseley Jimenez">    
-    <link rel="stylesheet" href="styles/home.css">    
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/home.css">
+
+
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="Website Logo" width="50" height="50">
+        <img src="images/home.svg" alt="Website Logo" width="50" height="50">
         <span>Moseley Jimenez</span>
         <button class="hamburger">☰</button>
     </header>
@@ -21,11 +25,13 @@
             <li><a href="final.html">Final Project</a></li>        
         </ul>                                                                        
     </nav>
+    
     <main>
         <h1>Home</h1>
         <section>
             <h2>About Me</h2>
-            <p>I'm Moseley Jimenez, I'm from Mexico. I love dancing kpop and watching kdramas. I'm so happy for every opportunity to learn and grow.</p>
+            <p>I'm Moseley Jimenez, I'm from Mexico. I love dancing kpop and watching kdramas. 
+                I'm so happy for every opportunity to learn and grow.</p>
         </section>
 
         <section>
@@ -35,24 +41,37 @@
 
         <section>
             <h2>Web Certificate Courses</h2>
-            <p>Content for section 3.</p>
+
+            <div>
+                <button id="all-btn">All Courses</button>
+                <button id="wdd-btn">WDD Courses</button>
+                <button id="cse-btn">CSE Courses</button>
+            </div>
+
+            <div id="course-container"></div>
+            <p>Total Credits: <span id="total-credits"></span></p>
         </section>
     </main>
+
     <footer>
         <div class="social-links">
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-            <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+            <a href="https://github.com/moseJIMLOP/wdd231" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/moseleyjl" target="_blank">LinkedIn</a>
+            <a href="https://www.facebook.com/moseley.jimlop?locale=es_LA" target="_blank">Facebook</a>
         </div>
 
         <div class="copyright">
-            &copy; <span id="currentyear"></span> Your Name, Your State/Country
+            &copy; <span id="currentyear"></span> Moseley Jimenez, Mexico
         </div>
 
         <div class="last-modified">
             Last modified: <span id="lastModified"></span>
         </div>
     </footer>
+
+    <script src="scripts/home.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 
 </body>
 </html>

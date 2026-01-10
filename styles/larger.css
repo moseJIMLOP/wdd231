@@ -1,0 +1,33 @@
+@media (min-width: 768px) {
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    header {
+        justify-content: flex-start;
+        gap: 2rem;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    section {
+        max-width: 800px;
+        margin: 0 auto 2rem auto;
+    }
+
+    main h1 {
+        font-size: 2.5rem;
+    }
+}
