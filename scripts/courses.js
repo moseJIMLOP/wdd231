@@ -78,12 +78,14 @@ const courses = [
     }
 ];
 
+
 const courseContainer = document.getElementById("course-container");
 const creditTotalSpan = document.getElementById("total-credits");
+const buttons = document.querySelectorAll(".course-buttons button");
+
 
 function displayCourses(courseList) {
     courseContainer.innerHTML = "";
-
     let totalCredits = 0;
 
     courseList.forEach(course => {
@@ -95,7 +97,7 @@ function displayCourses(courseList) {
         }
 
         courseCard.innerHTML = `
-            <h3>${course.subject}${course.number}</h3>
+            <h3>${course.subject} ${course.number}</h3>
             <p>${course.title}</p>
             <p>Credits: ${course.credits}</p>
         `;
@@ -107,18 +109,28 @@ function displayCourses(courseList) {
     creditTotalSpan.textContent = totalCredits;
 }
 
+
+function setActiveButton(activeId) {
+    buttons.forEach(btn => btn.classList.remove("active"));
+    document.getElementById(activeId).classList.add("active");
+}
+
+
 document.getElementById("all-btn").addEventListener("click", () => {
     displayCourses(courses);
+    setActiveButton("all-btn");
 });
 
 document.getElementById("wdd-btn").addEventListener("click", () => {
-    const wddCourses = courses.filter(course => course.subject === "WDD");
-    displayCourses(wddCourses);
+    displayCourses(courses.filter(course => course.subject === "WDD"));
+    setActiveButton("wdd-btn");
 });
 
 document.getElementById("cse-btn").addEventListener("click", () => {
-    const cseCourses = courses.filter(course => course.subject === "CSE");
-    displayCourses(cseCourses);
+    displayCourses(courses.filter(course => course.subject === "CSE"));
+    setActiveButton("cse-btn");
 });
 
+
 displayCourses(courses);
+setActiveButton("all-btn");
