@@ -82,13 +82,6 @@ section img {
     margin: 0.5rem 0;
 }
 
-footer {
-    border-top: 1px solid #dddddd;
-    padding: 1rem 0;
-    font-size: 0.9rem;
-    color: #2027f3;
-}
-
 .social-links a {
     text-decoration: none;
     margin-right: 0.5rem;
@@ -97,4 +90,9 @@ footer {
 
 .social-links a:hover {
     color: #0077cc;
+}
+
+nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid rgb(152, 18, 18);
 }

@@ -78,43 +78,47 @@ const courses = [
     }
 ];
 
-const courseContainer = document.getElementById('#course-container');
+const courseContainer = document.getElementById("course-container");
+const creditTotalSpan = document.getElementById("total-credits");
 
-function displayCourses(filter = 'all') {
-    let filtered = courses;
+function displayCourses(courseList) {
+    courseContainer.innerHTML = "";
 
-    if(filter !== "All") {
-        filtered = courses.filter(course => course.subject === filter);
-    }
+    let totalCredits = 0;
 
-    courseContainer.innerHTML = '';
-
-    totalCredits = 0;
-
-    filtered.forEach(course => {
-        totalCredits += course.credits;
-        const courseCard = document.createElement('div');
-        courseCard.classList.add('course-card');
+    courseList.forEach(course => {
+        const courseCard = document.createElement("div");
+        courseCard.classList.add("course-card");
 
         if (course.completed) {
-            courseCard.classList.add('completed');
+            courseCard.classList.add("completed");
         }
 
         courseCard.innerHTML = `
-            <h3>${course.title}</h3>
-            <p>Code: ${course.subject}${course.number}</p>
+            <h3>${course.subject}${course.number}</h3>
+            <p>${course.title}</p>
             <p>Credits: ${course.credits}</p>
-            <p>${course.description}</p>
-            <p>Technology: ${course.technology.join(', ')}</p>
         `;
 
+        totalCredits += course.credits;
         courseContainer.appendChild(courseCard);
     });
 
-    document.getElementById('total-credits').textContent = totalCredits;
+    creditTotalSpan.textContent = totalCredits;
 }
 
-displayCourses();
-document.getElementById('all-btn').addEventListener('click', () => displayCourses("All"));
-document.getElementById('wdd-btn').addEventListener('click', () => displayCourses("WDD"));
-document.getElementById('cse-btn').addEventListener('click', () => displayCourses("CSE"));
+document.getElementById("all-btn").addEventListener("click", () => {
+    displayCourses(courses);
+});
+
+document.getElementById("wdd-btn").addEventListener("click", () => {
+    const wddCourses = courses.filter(course => course.subject === "WDD");
+    displayCourses(wddCourses);
+});
+
+document.getElementById("cse-btn").addEventListener("click", () => {
+    const cseCourses = courses.filter(course => course.subject === "CSE");
+    displayCourses(cseCourses);
+});
+
+displayCourses(courses);
