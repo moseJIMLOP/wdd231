@@ -15,8 +15,7 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 1rem;
+    justify-content: space-between;
     padding: 0.75rem 1rem;
     background: #eee;
 }
@@ -25,10 +24,16 @@ header span {
     font-weight: bold;
 }
 
+.logo-name {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .site-title {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-left: 0;
+    margin-left: 0rem;
 }
 
 .hamburger {
@@ -43,15 +48,20 @@ nav {
 }
 
 nav ul {
+    display: none;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+nav ul.show {
+    display: flex;
+}
+
 nav li a {
     display: block;
     padding: 0.75rem 1rem;
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: 600;
     border-bottom: 1px solid var(--light);
@@ -78,7 +88,7 @@ section h2 {
     color: white;
     padding: 0.5rem;
     margin: -1rem -1rem 1rem -1rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
 }
 
@@ -86,13 +96,6 @@ section img {
     display: block;
     max-width: 100%;
     margin: 0 auto;
-}
-
-section div {
-    display: flex;
-    gap: 0.5rem;
-    margin: 1rem 0;
-    flex-wrap: wrap;
 }
 
 section button {
@@ -146,6 +149,14 @@ section button.active {
     font-weight: bold;
 }
 
+.course-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    justify-content: space-around;
+    font-size: 1rem;
+    font-weight: 600;
+}
 
 footer {
     text-align: center;

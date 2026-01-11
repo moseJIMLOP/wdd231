@@ -97,9 +97,7 @@ function displayCourses(courseList) {
         }
 
         courseCard.innerHTML = `
-            <h3>${course.subject} ${course.number}</h3>
-            <p>${course.title}</p>
-            <p>Credits: ${course.credits}</p>
+            <h3>${course.subject} ${course.number}</h3></p>
         `;
 
         totalCredits += course.credits;
