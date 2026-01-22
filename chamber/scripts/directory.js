@@ -25,7 +25,16 @@ function displayMembers(members) {
     address.textContent = member.address;
 
     const phone = document.createElement("p");
-    phone.textContent = member.phone;
+    phone.textContent = member.phone || "Phone: N/A";
+
+    const level = document.createElement("p");
+    if (member.membership === 1) {
+      level.textContent = "Membership: Member";
+    } else if (member.membership === 2) {
+      level.textContent = "Membership: Silver";
+    } else if (member.membership === 3) {
+      level.textContent = "Membership: Gold";
+    }
 
     const link = document.createElement("a");
     link.href = member.website;
@@ -37,7 +46,7 @@ function displayMembers(members) {
     img.alt = `${member.name} logo`;
     img.loading = "lazy";
 
-    card.append(img, name, address, phone, link);
+    card.append(img, name, address, phone, level, link);
     membersContainer.appendChild(card);
   });
 }
@@ -51,4 +60,17 @@ listBtn.addEventListener("click", () => {
   membersContainer.classList.add("list");
   membersContainer.classList.remove("grid");
 });
+
+const level = document.createElement("p");
+
+if (member.membership === 1) {
+  level.textContent = "Membership: Member";
+} else if (member.membership === 2) {
+  level.textContent = "Membership: Silver";
+} else if (member.membership === 3) {
+  level.textContent = "Membership: Gold";
+}
+
+card.append(img, name, address, phone, level, link);
+phone.textContent = member.phone || "Phone: N/A";
 
