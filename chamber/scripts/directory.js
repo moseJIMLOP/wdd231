@@ -52,25 +52,12 @@ function displayMembers(members) {
 }
 
 gridBtn.addEventListener("click", () => {
-  membersContainer.classList.add("grid");
-  membersContainer.classList.remove("list");
+
+    membersContainer.classList.add("grid");
+    membersContainer.classList.remove("list");
 });
 
 listBtn.addEventListener("click", () => {
-  membersContainer.classList.add("list");
-  membersContainer.classList.remove("grid");
+    membersContainer.classList.add("list");
+    membersContainer.classList.remove("grid");
 });
-
-const level = document.createElement("p");
-
-if (member.membership === 1) {
-  level.textContent = "Membership: Member";
-} else if (member.membership === 2) {
-  level.textContent = "Membership: Silver";
-} else if (member.membership === 3) {
-  level.textContent = "Membership: Gold";
-}
-
-card.append(img, name, address, phone, level, link);
-phone.textContent = member.phone || "Phone: N/A";
-
