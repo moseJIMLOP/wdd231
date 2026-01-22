@@ -14,44 +14,48 @@
     <meta property="og:title" content="Chamber of Commerce Directory">
     <meta property="og:description" content="Explore our local chamber of commerce member directory.">
     <meta property="og:image" content="https://mosejimlop.github.io/wdd231/images/chamber.jpg">
-    <meta property="og:url" content="https://mosejimlop.github.io/wdd231/"> 
+    <meta property="og:url" content="https://mosejimlop.github.io/wdd231/chamber/directory.html"> 
     <meta property="og:type" content="website">
 
     <link rel="stylesheet" href="styles/directory.css">
 
 </head>
 <body>
-    <div class="view-buttons">
-        <button id="grid">Grid View</button>
-        <button id="list">List View</button>
-    </div>
+    <header>
+        <h1>Timbuktu Chamber of Commerce</h1>
+    </header>
 
-    <section class="directory" id="members">
-  <article class="member-card">
-    <h2>Business One</h2>
-    <p>📍 CDMX, Ciudad de Mexico</p>
-    <p>📞 (55) 95 393 310</p>
-    <a href="#">page</a>
-  </article>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
 
-  <article class="member-card">
-    <h2>Business Two</h2>
-    <p>📍 monterrey, Nuevo Leon</p>
-    <p>📞 (55) 98 374 938</p>
-    <a href="#">page</a>
-  </article>
-</section>
+    <main>
+        <h2>Member Directory</h2>
+    </main>
+
     <footer>
-        
+        <p>Timbuktu Chamber of Commerce</p>
+        <p>10 Rue De La Paix, Timbuktu, Mali</p>
+        <p>Email: info@timbuktuchamber.org</p>
+        <p>Phone: (223) 555-2300</p>
 
-        <div>
-            &copy; <span id="currentyear"></span> 🐥 Moseley Jimenez Lopez 🐥 Mexico, CDMX
-        </div>
+    <p>
+        © <span id="currentyear"></span>
+        Moseley Jimenez Lopez | WDD 231
+    </p>
 
-        <div>
-            Last modified: <span id="lastModified"></span>
-        </div>
+    <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
+
+    <script>
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+
 </body>
-<script src="scripts/directory.js"></script>
 </html>
