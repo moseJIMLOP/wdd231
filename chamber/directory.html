@@ -17,7 +17,8 @@
     <meta property="og:url" content="https://mosejimlop.github.io/wdd231/chamber/directory.html"> 
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
 
 </head>
 <body>
@@ -36,6 +37,12 @@
 
     <main>
         <h2>Member Directory</h2>
+
+        <div class="view-buttons">
+            <button id="grid">Grid View</button>
+            <button id="list">List View</button>
+        </div>
+        <section id="members" class="grid"></section>
     </main>
 
     <footer>

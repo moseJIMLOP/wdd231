@@ -1,0 +1,71 @@
+[
+  {
+    "name": "Centro de Capacitación Misional de la Ciudad de México",
+    "address": "Carr. Tenayuca Chalmita 828, Zona Escolar, Gustavo A. Madero, 07230 Ciudad de México, CDMX",
+    "phone": "55 4125 4125",
+    "website": "https://www.churchofjesuschrist.org/callings/missionary/mexico-missionary-training-center",
+    "image": "ccm.webp",
+    "membership": 3,
+    "description": "Training center for missionaries of The Church of Jesus Christ of Latter-day Saints."
+  },
+  {
+    "name": "Arena CDMX",
+    "address": "Av. de las Granjas 800, Santa Barbara, Azcapotzalco, 02230 Ciudad de México, CDMX",
+    "phone": "55 6235 7016",
+    "website": "https://www.arenacdmx.com/",
+    "image": "arena.webp",
+    "membership": 2,
+    "description": "Multi-purpose event venue in Mexico City."
+  },
+
+  {
+    "name": "Palacio de Bellas Artes",
+    "address": "Av. Juarez S/N, Centro Histórico de la Cdad. de México, Centro, Cuauhtémoc, 06050 Ciudad de México, CDMX",
+    "phone": "52 8647 6500",
+    "website": "https://palacio.inba.gob.mx/",
+    "image": "bellas_artes.webp",
+    "membership": 3,
+    "description": "Historic cultural center in Mexico City."
+  },
+
+  {
+    "name": "Templo de la Ciudad de México",
+    "address": "Av. 510 90, Pueblo de San Juan de Aragón, Gustavo A. Madero, 07950 Ciudad de México, CDMX",
+    "phone": "55 5003 3700",
+    "website": "https://www.churchofjesuschrist.org/temples/details/mexico-city-mexico-temple?utm_source=gmb&utm_medium=yext&y_source=1_MTAwMjQxNDQ1Ny03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D",
+    "image": "mexico_city_temple.webp",
+    "membership": 2,
+    "description": "Temple of The Church of Jesus Christ of Latter-day Saints."
+  },
+
+  {
+    "name": "El Ángel de la Independencia",
+    "address": "Av. P.º de la Reforma 342-Piso 27, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX",
+    "phone": "N/A",
+    "website": "https://mexicocity.cdmx.gob.mx/venues/el-angel-independencia/?lang=es",
+    "image": "angel.webp",
+    "membership": 2,
+    "description": "Historic monument in Mexico City."
+  },
+
+  {
+    "name": "Kpop Café Oazo",
+    "address": "Dr José María Vertiz #641 - Local, Narvarte Oriente, Benito Juárez, 03023 Ciudad de México, CDMX",
+    "phone": "56 1200 0466",
+    "website": "http://www.instagram.com/kpopcafeoazo",
+    "image": "coffe_kpop.webp",
+    "membership": 2,
+    "description": "K-pop themed café in Mexico City."
+  },
+
+  {
+    "name": "Papalote Museo del Niño",
+    "address": "Av. de los Compositores 710, Ampliación Daniel Garza, Bosque de Chapultepec II Secc, Miguel Hidalgo, 11830 Ciudad de México, CDMX",
+    "phone": "55 5237 1781",
+    "website": "https://www.papalote.org.mx/",
+    "image": "papalote.webp",
+    "membership": 2,
+    "description": "Children's museum in Mexico City."
+  }
+
+]

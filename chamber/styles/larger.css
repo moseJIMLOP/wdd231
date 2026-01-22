@@ -1,0 +1,20 @@
+@media (min-width: 768px) {
+
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav a {
+        border-right: 1px solid #fff;
+    }
+
+    nav a:last-child {
+        border-right: none;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
