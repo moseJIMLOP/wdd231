@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce | Home</title>
+    <meta name="description" content="Welcome to the Chamber of Commerce.">
+    <link rel="stylesheet" href="styles/normalize.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Chamber of Commerce</h1>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <img src="images/hero.webp" alt="Downtown city view representing the Chamber of Commerce">
+            <a href="join.html" class="btn">Join Now</a>
+        </section>
+
+        <section class="events">
+            <h2>Current Events</h2>
+            <p>chamber business Expo - Coming Soon</p>
+        </section>
+
+        <section class="weather">
+            <h2>Weather</h2>
+            <p>
+                Current temperature:
+                <span id="current-temp"></span>
+            </p>
+            <p id="weather-desc"></p>
+        
+            <div class="forecast">
+                <p>Day 1: <span id="day1"></span></p>
+                <p>Day 2: <span id="day2"></span></p>
+                <p>Day 3: <span id="day3"></span></p>
+            </div>
+        </section>
+
+        <section class="spotlights">
+            <h2>Business spotlights</h2>
+            <div id="spotlight-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Chamber of Commerce</p>
+    </footer>
+
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/spotlights.js"></script>
+</body>
+</html>
