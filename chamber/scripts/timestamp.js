@@ -1,8 +1,12 @@
-<script>
-    document.querySelectorAll('.membership-cards a').forEach(link => {
-        link.addEventListener('click', event => {
+document.addEventListener('DOMContentLoaded', () => {
+    const links = document.querySelectorAll('.membership-cards a');
+    links.forEach(function(link) {
+        link.addEventListener('click', function(event) {
             event.preventDefault();
-            document.querySelector(link.getAttribute('href')).showModal();
+            const modal = document.querySelector(link.getAttribute('href'));
+            if (modal) {
+                modal.showModal();
+            }
         });
     });
-</script>
+});

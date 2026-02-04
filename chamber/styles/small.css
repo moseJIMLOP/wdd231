@@ -1,12 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #2b9eb3;
-    color: #fafad7;
+    background-color: #ecd4ff;
+    color: #122c83;
 }
 
 header {
-    background-color: #2b9eb3;
+    background-color: #122c83;
     color: white;
     padding: 1rem;
     text-align: center;
@@ -24,12 +24,12 @@ nav a {
     padding: 0.75rem;
     display: block;
     text-decoration: none;
-    color: #0f444d;
-    background-color: #fafad7;
+    color: black;
+    background-color: #86d4f6;
 }
 
 nav a:hover {
-    background-color: #edf79e;
+    background-color: #ecd4ff;
 }
 
 main {
@@ -37,7 +37,7 @@ main {
 }
 
 footer {
-    background-color: #2b9eb3;
+    background-color: #122c83;
     color: white;
     text-align: center;
     padding: 1rem;
@@ -60,8 +60,8 @@ footer {
 }
 
 #members article {
-  background-color: #fafad7;
-  color: #0f444d;
+  background-color: #86d4f6;
+  color: #000000;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);

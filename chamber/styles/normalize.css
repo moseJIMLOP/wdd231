@@ -1,13 +1,13 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #2b9eb3;
-    color: #0f444d;
+    background-color: #ecd4ff;
+    color: black;
 }
 
 header,
 footer {
-    background-color: #2b9eb3;
+    background-color: #122c83;
     color: white;
     text-align: center;
     padding: 1rem;
@@ -22,8 +22,8 @@ nav ul {
 }
 
 nav a {
-    background-color: #fafad7;
-    color: #0f444d;
+    background-color: #85e3ff;
+    color: black;
     text-decoration: none;
     padding: 0.75rem;
     display: block;
@@ -31,7 +31,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #edf79e;
+    background-color: #1724d7;
 }
 
 .hero {
@@ -49,8 +49,8 @@ nav a:hover {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #0f444d;
-    color: white;
+    background-color: #85e3ff;
+    color: black;
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     border-radius: 6px;
@@ -59,18 +59,18 @@ nav a:hover {
 
 .hero .btn:hover {
     background-color: #edf79e;
-    color: #0f444d;
+    color: #ace7ff;
 }
 
 main section {
-    background-color: #fafad7;
+    background-color: #6eb5ff;
     margin: 1rem 0;
     padding: 1rem;
     border-radius: 8px;
 }
 
 h2 {
-    color: #0f444d;
+    color: black;
 }
 
 .membership-cards .card {
