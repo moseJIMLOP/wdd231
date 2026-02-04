@@ -16,8 +16,8 @@
     <header>
         <h1>Chamber of Commerce</h1>
     </header>
-        
-        <nav>
+
+    <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="directory.html">Directory</a></li>
@@ -27,43 +27,36 @@
     </nav>
 
     <main>
-        <h1>Join the Chamber of Commerce</h1>
+        <h2>Join the Chamber of Commerce</h2>
         <p>Ready to grow your business and connect with local leaders? Join our Chamber today!</p>
 
         <div class="join-layout">
             <form class="join-form" method="get" action="thankyou.html">
-                <label>
-                    First Name 
+                <label>First Name
                     <input type="text" name="firstName" required title="First Name" autocomplete="given-name">
                 </label>
 
-                <label>
-                    Last Name 
+                <label>Last Name
                     <input type="text" name="lastName" required title="Last Name" autocomplete="family-name">
                 </label>
 
-                <label>
-                    Organization
-                    <input type="text" name="orgtitle" title="Organization Title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                <label>Organization
+                    <input type="text" name="orgtitle" title="Organization Title" autocomplete="organization-title">
                 </label>
 
-                <label>
-                    Email 
-                    <input type="email" name="email" required title="Email Address" autocomplete="email" placeholder="example@email.com">
+                <label>Email
+                    <input type="email" name="email" required title="Email Address" autocomplete="email">
                 </label>
 
-                <label>
-                    Phone 
+                <label>Phone
                     <input type="tel" name="phone" required title="Phone Number" autocomplete="tel">
                 </label>
 
-                <label>
-                    Business Name 
+                <label>Business Name
                     <input type="text" name="business" required title="Business Name" autocomplete="organization">
                 </label>
 
-                <label>
-                    Membership Level
+                <label>Membership Level
                     <select name="membership" required>
                         <option value="">Select a membership level</option>
                         <option value="np">NP Membership</option>
@@ -73,8 +66,7 @@
                     </select>
                 </label>
 
-                <label>
-                    Business Description
+                <label>Business Description
                     <textarea name="description" title="Business Description"></textarea>
                 </label>
 
@@ -82,67 +74,78 @@
                 <input type="submit" value="Apply for Membership">
             </form>
 
-
             <section class="membership-cards">
                 <article class="card">
                     <h3>NP Membership</h3>
                     <p>No fee for non-profit organizations.</p>
-                    <a href="#npModal">View Benefits</a>
+                    <button type="button" data-modal="npModal">View Benefits</button>
                 </article>
 
                 <article class="card">
                     <h3>Bronze Membership</h3>
                     <p>Basic exposure and networking opportunities.</p>
-                    <a href="#bronzeModal">View Benefits</a>
+                    <button type="button" data-modal="bronzeModal">View Benefits</button>
                 </article>
 
                 <article class="card">
                     <h3>Silver Membership</h3>
-                    <p>More Visibility and training opportunities.</p>
-                    <a href="#silverModal">View Benefits</a>
+                    <p>More visibility and training opportunities.</p>
+                    <button type="button" data-modal="silverModal">View Benefits</button>
                 </article>
 
                 <article class="card">
                     <h3>Gold Membership</h3>
                     <p>Premium exposure and benefits.</p>
-                    <a href="#goldModal">View Benefits</a>
+                    <button type="button" data-modal="goldModal">View Benefits</button>
                 </article>
             </section>
         </div>
-
     </main>
 
     <footer>
-        <p>&copy; Chamber of Commerce.</p>
+        <p>&copy; Chamber of Commerce | 2026</p>
     </footer>
-
-    <script>
-        document.getElementById('timestamp').value = new Date().toISOString();
-    </script>
 
     <dialog id="npModal">
         <h3>NP Membership Benefits</h3>
         <p>No fee, community events, basic directory listing.</p>
-        <button onclick="this.closest('dialog').close()">Close</button>
+        <button class="close-btn">Close</button>
     </dialog>
 
     <dialog id="bronzeModal">
         <h3>Bronze Membership Benefits</h3>
         <p>Directory listing, event invitations, basic advertising.</p>
-        <button onclick="this.closest('dialog').close()">Close</button>
+        <button class="close-btn">Close</button>
     </dialog>
 
     <dialog id="silverModal">
         <h3>Silver Membership Benefits</h3>
         <p>All Bronze benefits plus training and homepage spotlight.</p>
-        <button onclick="this.closest('dialog').close()">Close</button> 
+        <button class="close-btn">Close</button>
     </dialog>
 
     <dialog id="goldModal">
         <h3>Gold Membership Benefits</h3>
         <p>All benefits, premium advertising, event discounts.</p>
-        <button onclick="this.closest('dialog').close()">Close</button>
+        <button class="close-btn">Close</button>
     </dialog>
 
+    <script>
+        document.getElementById('timestamp').value = new Date().toISOString();
+
+        const modalButtons = document.querySelectorAll('.membership-cards button');
+        modalButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const modalId = btn.dataset.modal;
+                document.getElementById(modalId).showModal();
+            });
+        });
+        const closeButtons = document.querySelectorAll('.close-btn');
+        closeButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.closest('dialog').close();
+            });
+        });
+    </script>
 </body>
 </html>

@@ -16,6 +16,7 @@
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/small.css">
 </head>
 
 <body>
@@ -42,7 +43,7 @@
 
         <section class="events">
             <h2>Current Events</h2>
-            <p>chamber business Expo - Coming Soon</p>
+            <p>Chamber Business Expo - Coming Soon</p>
         </section>
 
         <section class="weather">
@@ -67,8 +68,16 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Chamber of Commerce</p>
+        <p>© <span id="currentyear"></span>
+        Moseley Jimenez Lopez | WDD 231</p>
+
+        <p>Last Modification: <span id="last-modified"></span></p>
     </footer>
+
+    <script>
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
 
     <script src="scripts/weather.js"></script>
     <script src="scripts/spotlights.js"></script>
