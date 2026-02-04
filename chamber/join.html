@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Commerce | Join</title>
+    <meta name="description" content="Become a member of our Chamber.">
+    <meta name="author" content="Moseley Jimenez">
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/larger.css">
+</head>
+
+<body>
+    <header>
+        <h1>Chamber of Commerce</h1>
+    </header>
+        
+        <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Join the Chamber of Commerce</h1>
+        <p>Ready to grow your business and connect with local leaders? Join our Chamber today!</p>
+
+        <div class="join-layout">
+            <form class="join-form" method="get" action="thankyou.html">
+                <label>
+                    First Name 
+                    <input type="text" name="firstName" required title="First Name" autocomplete="given-name">
+                </label>
+
+                <label>
+                    Last Name 
+                    <input type="text" name="lastName" required title="Last Name" autocomplete="family-name">
+                </label>
+
+                <label>
+                    Organization
+                    <input type="text" name="orgtitle" title="Organization Title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                </label>
+
+                <label>
+                    Email 
+                    <input type="email" name="email" required title="Email Address" autocomplete="email" placeholder="example@email.com">
+                </label>
+
+                <label>
+                    Phone 
+                    <input type="tel" name="phone" required title="Phone Number" autocomplete="tel">
+                </label>
+
+                <label>
+                    Business Name 
+                    <input type="text" name="business" required title="Business Name" autocomplete="organization">
+                </label>
+
+                <label>
+                    Membership Level
+                    <select name="membership" required>
+                        <option value="">Select a membership level</option>
+                        <option value="np">NP Membership</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label>
+                    Business Description
+                    <textarea name="description" title="Business Description"></textarea>
+                </label>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+                <input type="submit" value="Apply for Membership">
+            </form>
+
+
+            <section class="membership-cards">
+                <article class="card">
+                    <h3>NP Membership</h3>
+                    <p>No fee for non-profit organizations.</p>
+                    <a href="#npModal">View Benefits</a>
+                </article>
+
+                <article class="card">
+                    <h3>Bronze Membership</h3>
+                    <p>Basic exposure and networking opportunities.</p>
+                    <a href="#bronzeModal">View Benefits</a>
+                </article>
+
+                <article class="card">
+                    <h3>Silver Membership</h3>
+                    <p>More Visibility and training opportunities.</p>
+                    <a href="#silverModal">View Benefits</a>
+                </article>
+
+                <article class="card">
+                    <h3>Gold Membership</h3>
+                    <p>Premium exposure and benefits.</p>
+                    <a href="#goldModal">View Benefits</a>
+                </article>
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; Chamber of Commerce.</p>
+    </footer>
+
+    <script>
+        document.getElementById('timestamp').value = new Date().toISOString();
+    </script>
+
+    <dialog id="npModal">
+        <h3>NP Membership Benefits</h3>
+        <p>No fee, community events, basic directory listing.</p>
+        <button onclick="this.closest('dialog').close()">Close</button>
+    </dialog>
+
+    <dialog id="bronzeModal">
+        <h3>Bronze Membership Benefits</h3>
+        <p>Directory listing, event invitations, basic advertising.</p>
+        <button onclick="this.closest('dialog').close()">Close</button>
+    </dialog>
+
+    <dialog id="silverModal">
+        <h3>Silver Membership Benefits</h3>
+        <p>All Bronze benefits plus training and homepage spotlight.</p>
+        <button onclick="this.closest('dialog').close()">Close</button> 
+    </dialog>
+
+    <dialog id="goldModal">
+        <h3>Gold Membership Benefits</h3>
+        <p>All benefits, premium advertising, event discounts.</p>
+        <button onclick="this.closest('dialog').close()">Close</button>
+    </dialog>
+
+</body>
+</html>
