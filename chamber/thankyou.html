@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Chamber</title>
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/small.css">
+</head>
+<body>
+    <main>
+        <h1>Thank You for Your Joining!</h1>
+
+        <p><strong>Name:</strong> <span id="name"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Phone:</strong> <span id="phone"></span></p>
+        <p><strong>Bussines:</strong> <span id="business"></span></p>
+        <p><strong>Date:</strong> <span id="date"></span></p>
+    </main>
+
+    <footer>
+        <p>Ciudad de México, México</p>
+        <p>info@here.org | +52 55 1234 5678</p>
+        <p>
+            © <span id="currentyear"></span>
+            Moseley Jimenez Lopez | WDD 231
+        </p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        document.getElementById("name").textContent =
+            params.get("firstName") + " " + params.get("lastName");
+
+        document.getElementById("email").textContent = params.get("email");
+        document.getElementById("phone").textContent = params.get("phone");
+        document.getElementById("business").textContent = params.get("business");
+        document.getElementById("date").textContent = params.get("timestamp");
+
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+</body>
+</html>

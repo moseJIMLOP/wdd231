@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover | | ciudad de mexico</title>
+
+    <meta name="description" content="Discover local businesses, events, and opportunities through our Chamber of Commerce, supporting growth and community connection.">
+    <meta name="author" content="Moseley Jimenez">
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Chamber of Commerce | Supporting Local Business">
+    <meta property="og:description" content="Connect with local businesses, explore community events, and grow your network through our Chamber of Commerce.">
+    <meta property="og:image" content="https://mosejimlop.github.io/wdd231/chamber/images/hero.webp">
+    <meta property="og:url" content="https://mosejimlop.github.io/wdd231/chamber/index.html">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/small.css">
+</head>
+<body>
+<header>
+    <h1>CDMX chamber of commerce</h1>
+</header>
+
+<nav>
+    <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html" class="active">Discover</a></li>
+</nav>
+
+<main class="discover-text">
+    <p>
+        Mexico City is one of the largest and most vibrant cities in the world.
+        It is a center of culture, business, innovation, and history.
+    </p>
+    <p>
+        Our chamber supports local businesses and helps strengthen the community
+        through networking, education, and collaboration.
+    </p>
+
+    <section class="discover-images">
+        <figure>
+            <img src="images/arena.webp" alt="Mexico City Arena" loading="lazy">
+            <figcaption>Arena CDMX</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/coffe_kpop.webp" alt="Historic center of Mexico City" loading="lazy">
+            <figcaption>Coffe kpop</figcaption>
+        </figure>
+</main>
+    <footer>
+        <p>Ciudad de México, México</p>
+        <p>info@here.org | +52 55 1234 5678</p>
+        <p>© <span id="currentyear"></span> Moseley Jimenez Lopez | WDD 231</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+
+    <script>
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+    </script>
+
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/spotlights.js"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@ const day1 = document.querySelector("#day1");
 const day2 = document.querySelector("#day2");
 const day3 = document.querySelector("#day3");
 
-const apiKey = "MY_API_KEY";
+const apiKey = "52d1e79df11cc63a35e6767ce21a6f2e";
 const lat = 19.44;
 const lon = -99.13;
 
