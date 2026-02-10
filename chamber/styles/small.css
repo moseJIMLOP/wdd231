@@ -77,3 +77,37 @@ footer {
 #members.list img {
   max-width: 100px;
 }
+
+.discover-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.discover-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+@media (min-width: 640px) {
+    .discover-grid {
+        grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f"
+        "g"
+        "h";
+    }
+
+    .card1 { grid-area: a; }
+    .card2 { grid-area: b; }
+    .card3 { grid-area: c; }
+    .card4 { grid-area: d; }
+    .card5 { grid-area: e; }
+    .card6 { grid-area: f; }
+    .card7 { grid-area: g; }
+    .card8 { grid-area: h; }
+}

@@ -131,7 +131,7 @@ h2 {
 }
 
 @media (min-width: 768px) {
-  nav ul {
+  nav ul { 
     flex-direction: row;
     justify-content: center;
   }
@@ -146,4 +146,25 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
+}
+
+@media (min-width: 641px) {
+    .discover-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "a b"
+        "c d"
+        "e f"
+        "g h";
+    }
+}
+
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+        "a a b c"
+        "d e f f"
+        "g h h h";
+    }
 }
