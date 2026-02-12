@@ -2,20 +2,20 @@ export const places = [
 
     {
 
-        name: "Zócalo de la Ciudad de México",
+        name: "Mexico CIty Historic Center",
         image: "images/zocalo.webp",
         address: "Plaza de la Constitución, Centro Histórico, CDMX",
         description: "The main square of Mexico City and one of the largest public squares in the world."
     },
     {
         name: "Palacio de Bellas Artes",
-        image: "images/bellas-artes.webp",
+        image: "images/bellas.webp",
         address: "Av. Juárez S/N, Centro Histórico, CDMX",
         description: "A cultural center famous for its architecture, murals, and performances."
     },
     {
         name: "Chapultepec Park",
-        image: "images/chapultepec.webp",
+        image: "images/chapu.webp",
         address: "Bosque de Chapultepec, Miguel Hidalgo, CDMX",
         description: "One of the largest city parks in the Western Hemisphere with museums and green spaces."
     },

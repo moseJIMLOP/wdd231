@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover | | ciudad de mexico</title>
+    <title>Discover | Chamber of Commerce</title>
 
     <meta name="description" content="Discover local businesses, events, and opportunities through our Chamber of Commerce, supporting growth and community connection.">
     <meta name="author" content="Moseley Jimenez">
@@ -24,27 +24,21 @@
 </header>
 
 <nav>
-    <li><a href="index.html">Home</a></li>
+    <ul>
+        <li><a href="index.html">Home</a></li>
         <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html">Join</a></li>
         <li><a href="discover.html" class="active">Discover</a></li>
+    </ul>
 </nav>
 
 <main class="discover-grid">
-
-    <section class="discover-images">
-        <figure>
-            <img src="images/arena.webp" alt="Mexico City Arena" loading="lazy">
-            <figcaption>Arena CDMX</figcaption>
-        </figure>
-
-        <figure>
-            <img src="images/coffe_kpop.webp" alt="Historic center of Mexico City" loading="lazy">
-            <figcaption>Coffe kpop</figcaption>
-        </figure>
+    <p id="visit-msg"></p>
+    <div class="cards"></div>
+    <h1 class="visually-hidden">Discover Mexico City</h1>
 </main>
     <footer>
-        <p>Ciudad de México, México</p>
+        <p>Mexico City, Mexico</p>
         <p>info@here.org | +52 55 1234 5678</p>
         <p>© <span id="currentyear"></span> Moseley Jimenez Lopez | WDD 231</p>
         <p>Last Modification: <span id="last-modified"></span></p>
@@ -55,8 +49,6 @@
         document.getElementById('last-modified').textContent = document.lastModified;
     </script>
 
-    <script src="scripts/weather.js"></script>
-    <script src="scripts/spotlights.js"></script>
     <script type="module" src="scripts/discover.js"></script>
 </body>
 </html>

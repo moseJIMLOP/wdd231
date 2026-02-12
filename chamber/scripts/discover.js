@@ -1,6 +1,6 @@
 import { places } from "../data/discover.mjs";
 
-const container = document.querySelector(".discover-grid");
+const container = document.querySelector(".cards");
 
 places.forEach((place, index) => {
     const card = document.createElement("section");
@@ -9,11 +9,11 @@ places.forEach((place, index) => {
     card.innerHTML = `
         <h2>${place.name}</h2>
         <figure>
-        <img src="${place.image}" alt="${place.name}">
+        <img src="${place.image}" alt="${place.name}" loading="lazy">
         </figure>
         <address>${place.address}</address>
         <p>${place.description}</p>
-        <button> Learn More</button>
+        <button type="button">Learn More</button>
     `;
 
     container.appendChild(card);
@@ -26,9 +26,9 @@ const now = Date.now();
 if (!lastVisit) {
     message.textContent = "Welcome! Let us know if you have any questions.";
 } else {
-    const daysPassed = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+    const daysPassed = Math.floor((now - Number(lastVisit)) / (1000 * 60 * 60 * 24));
     if (daysPassed < 1){
-        message.textContent = "Back so soon! Yeii!";
+        message.textContent = "Back so soon! Awesome!";
     } else if (daysPassed === 1) {
         message.textContent = "You last visited yesterday!";
     } else {
