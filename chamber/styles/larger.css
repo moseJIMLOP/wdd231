@@ -21,6 +21,8 @@
 
 @media (min-width: 1025px) {
   .discover-grid {
+    display: grid;
+    gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
       "card1 card2 card3 card4"

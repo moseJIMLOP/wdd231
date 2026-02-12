@@ -17,6 +17,10 @@ places.forEach((place, index) => {
     `;
 
     container.appendChild(card);
+
+    setTimeout(() => card.classList.add("active"), 50);
+        card.classList.add("active");
+    }, index * 200);
 });
 
 const message = document.querySelector("#visit-msg");
@@ -36,4 +40,4 @@ if (!lastVisit) {
     }
 }
 localStorage.setItem("lastVisit", now);
-        
+
