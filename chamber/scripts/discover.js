@@ -19,7 +19,7 @@ places.forEach((place, index) => {
     container.appendChild(card);
 
     setTimeout(() => {
-        card.classList.add("active");
+       card.classList.add("active");
     }, index * 200);
 });
 
